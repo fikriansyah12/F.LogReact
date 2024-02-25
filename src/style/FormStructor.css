@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+
+html,body {
+    position: relative;
+    padding: 20px;
+    margin: auto;
+    min-height: 80vh;
+    background-color: #E1E8EE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url('wild-vibes-1RnPg7tET_s-unsplash.jpg');
+}
+
+@media only screen and (max-width: 768px) {
+    .form-structor {
+        width: 80%;
+    }
+
+    .signup, .login {
+        width: 100%;
+        left: 0;
+        top: unset;
+        transform: none;
+    }
+
+    .center {
+        top: calc(50% - 10%);
+    }
+}
+
+.form-structor {
+    background-color: #222;
+    border-radius: 30px;
+    height: 550px;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-structor::after {
+    content: '';
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 500px;
+    background-image: url('warren-bh4LQHcOcxE-unsplash.jpg');
+}
+
+.signup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    z-index: 5;
+    transition: all .3s ease;
+}
+
+.signup.slide-up {
+    top: 5%;
+    transform: translate(-50%, 0%);
+    transition: all .3s ease;
+}
+
+.signup.slide-up .form-holder,
+.signup.slide-up .submit-btn {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.signup.slide-up .form-title {
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.signup.slide-up .form-title span {
+    margin-right: 5px;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.signup .form-title {
+    color: #fff;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.signup .form-title span {
+    color: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+}
+
+.signup .form-holder {
+    border-radius: 15px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: 50px;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.signup .form-holder .input {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 8px 15px;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    font-size: 12px;
+}
+
+.signup .form-holder .input:last-child {
+    border-bottom: 0;
+}
+
+.signup .form-holder .input::-webkit-input-placeholder {
+    color: rgba(0,0,0,0.4);
+}
+
+.signup .submit-btn {
+    background-color: rgba(0,0,0,0.4);
+    color: rgba(256,256,256,0.7);
+    border: 0;
+    border-radius: 15px;
+    display: block;
+    margin: 15px auto; 
+    padding: 15px 45px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.signup .submit-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.login {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 5;
+    transition: all .3s ease;
+}
+
+.login::before {
+    content: '';
+    position: absolute;
+    padding: 10px;
+    left: 50%;
+    top: -20px;
+    transform: translate(-50%, 0);
+    background-color: #fff;
+    width: 200%;
+    height: 250px;
+    border-radius: 50%;
+    z-index: 4;
+    transition: all .3s ease;
+}
+
+.login .center {
+    position: absolute;
+    top: calc(50% - 10%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    z-index: 5;
+    transition: all .3s ease;
+}
+
+.login .form-title {
+    color: #000;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.login .form-title span {
+    color: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+}
+
+.login .form-holder {
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    overflow: hidden;
+    margin-top: 50px;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.login .form-holder .input {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 8px 15px;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    font-size: 12px;
+}
+
+.login .form-holder .input:last-child {
+    border-bottom: 0;
+}
+
+.login .form-holder .input::-webkit-input-placeholder {
+    color: rgba(0,0,0,0.4);
+}
+
+.login .submit-btn {
+    background-color: #000000;
+    color: rgba(256,256,256,0.7);
+    border: 0;
+    border-radius: 15px;
+    display: block;
+    margin: 15px auto; 
+    padding: 15px 45px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.login .submit-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.login.slide-up {
+    top: 90%;
+    transition: all .3s ease;
+}
+
