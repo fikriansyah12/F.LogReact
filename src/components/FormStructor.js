@@ -1,6 +1,16 @@
 import React from 'react'
 
 
+  const handleLoginClick = () => {
+    const parent = document.getElementById('login').parentNode.parentNode;
+    parent.classList.add('slide-up');
+  };
+
+
+  const handleSignupClick = () => {
+    const parent = document.getElementById('signup').parentNode.parentNode;
+    parent.classList.add('slide-up');
+  };
 
 
 function FormStructor() {
@@ -13,16 +23,16 @@ function FormStructor() {
         <input type="email" className="input" placeholder="Email" />
         <input type="password" className="input" placeholder="Password" />
       </div>
-      <button className="submit-btn">Sign up</button>
+      <button className="submit-btn" onClick={handleSignupClick}>Sign up</button>
     </div>
     <div className="login slide-up">
       <div className="center">
         <h2 className="form-title" id="login"><span>or</span></h2>
         <div className="form-holder">
-          {/* <input type="email" className="input" placeholder="Email" />
-          <input type="password" className="input" placeholder="Password" /> */}
+        <input type="email" className="input" placeholder="Email" />
+          <input type="password" className="input" placeholder="Password" /> 
         </div>
-        <button onClick="submit-btn">Sign up</button>
+        <button className="submit-btn" onClick={handleLoginClick}>Login</button>
       </div>        
     </div>
   </div>
@@ -30,5 +40,5 @@ function FormStructor() {
   )
 }
 
-export default FormStructor
+export default FormStructor;
 
