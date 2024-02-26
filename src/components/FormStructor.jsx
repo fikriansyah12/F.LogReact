@@ -13,9 +13,9 @@ import React from 'react'
   };
 
 
-function FormStructor() {
+const FormStructor = () => {
   return (
-    <div><div className="form-structor">
+    <><div className="form-structor">
     <div className="signup">
       <h2 className="form-title" id="signup"><span>or</span>Sign up</h2>
       <div className="form-holder">
@@ -36,7 +36,7 @@ function FormStructor() {
       </div>        
     </div>
   </div>
-  </div>
+  </>
   )
 }
 
